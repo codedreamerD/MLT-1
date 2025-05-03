@@ -10,38 +10,32 @@ Proyek ini bertujuan membangun model machine learning berbasis LSTM untuk mempre
 
 ### Problem Statements
 
-* Bagaimana memanfaatkan data historis untuk memprediksi produksi pangan pada negara-negara ASEAN?
-* Apakah model LSTM mampu memberikan hasil prediksi yang akurat untuk data produksi time-series?
+1. Tren produksi komoditas pertanian di ASEAN sangat fluktuatif dan tidak menentu dari tahun ke tahun.
+2. Belum ada standar prediksi terstruktur untuk membandingkan posisi produksi Indonesia terhadap negara ASEAN lainnya.
+3. Metode statistik konvensional (regresi linear, moving average) kurang mampu menangkap pola musiman dan nonlinier yang kompleks.
 
 ### Goals
 
-* Membangun model prediksi produksi berdasarkan tren tahunan dan jenis komoditas di negara ASEAN.
-* Mengevaluasi model menggunakan metrik MSE dan RMSE, lalu memprediksi hasil produksi hingga tahun 2030.
+1. Mengembangkan model prediksi produksi menggunakan LSTM univariat berdasarkan histori data produksi (1961–2023).
+2. Membandingkan hasil prediksi tahun 2022–2030 antar negara ASEAN untuk tiap komoditas.
+3. Menunjukkan keunggulan LSTM dibanding metode tradisional dalam menangkap pola waktu musiman.
 
 ### Solution Statements
 
-* Menggunakan **Long Short-Term Memory (LSTM)** karena kemampuannya dalam mempelajari pola jangka panjang pada data time series.
-* Menyusun preprocessing data berupa encoding, scaling, dan reshaping sebelum digunakan oleh model LSTM.
-* Melakukan **early stopping** untuk menghindari overfitting, serta membandingkan hasil prediksi aktual dan prediksi model menggunakan **RMSE** sebagai indikator akurasi.
+* Melatih 25 model LSTM univariat (5 negara × 5 komoditas).
+* Evaluasi performa model dilakukan menggunakan **MSE** dan **RMSE**.
+* Menyediakan visualisasi tren dan hasil prediksi dalam grafik garis dan batang.
 
 ## Data Understanding
 
-Dataset yang digunakan berisi data produksi komoditas pangan dari berbagai negara ASEAN. File data bernama `Data.csv` yang merupakan dataset [World Food Production Dataset (Kaggle)](https://www.kaggle.com/datasets/rafsunahmad/world-food-production/data) dengan periode waktu dari 1961–2023 dan berisi 11.912 baris dengan 24 kolom.
+File data bernama `Data.csv` yang merupakan dataset [World Food Production Dataset (Kaggle)](https://www.kaggle.com/datasets/rafsunahmad/world-food-production/data) dan berisi 11.912 baris dengan 24 kolom. Dataset yang digunakan berisi data produksi komoditas pangan dari berbagai komoditas (dalam ton) dari tahun 1961 hingga 2023, mencakup lebih dari 160 negara. 
 
 ### Fitur penting pada dataset:
 
-* `Area`: Negara (Indonesia, Malaysia, Vietnam, Thailand dan Filipina.)
+* `Entity`: Negara (Indonesia, Malaysia, Vietnam, Thailand dan Filipina.)
 * `Item`: Komoditas (Rice, Maize, Coffee, green, Cocoa Beans, Palm Oil)
 * `Year`: Tahun produksi
 * `Value`: Jumlah produksi (dalam metrik ton)
-
-### Komoditas yang dianalisis:
-
-* Rice
-* Maize
-* Cocoa Beans
-* Palm Oil
-* Coffee, green
 
 ### Visualisasi awal:
 
@@ -58,12 +52,6 @@ Dataset yang digunakan berisi data produksi komoditas pangan dari berbagai negar
 4. **Normalisasi**: Menggunakan `MinMaxScaler` agar nilai berada pada rentang 0-1.
 5. **Sequence Generation**: Membentuk data menjadi time series sequence untuk input LSTM.
 6. **Split Data**: Data dibagi menjadi train dan test dengan proporsi 80:20.
-
-### Alasan tiap langkah:
-
-* LSTM membutuhkan input dalam bentuk sequence time series
-* Normalisasi mempercepat konvergensi model
-* Transformasi log membantu distribusi data lebih normal
 
 ## Modeling
 
