@@ -32,11 +32,11 @@ Proyek ini bertujuan membangun model machine learning berbasis LSTM untuk mempre
 
 ## Data Understanding
 
-Dataset yang digunakan berisi data produksi komoditas pangan dari berbagai negara ASEAN. File data bernama `Data.csv`, dan berisi 11.912 baris dengan 24 kolom.
+Dataset yang digunakan berisi data produksi komoditas pangan dari berbagai negara ASEAN. File data bernama `Data.csv` yang merupakan dataset [World Food Production Dataset (Kaggle)](https://www.kaggle.com/datasets/rafsunahmad/world-food-production/data) dengan periode waktu dari 1961–2023 dan berisi 11.912 baris dengan 24 kolom.
 
 ### Fitur penting pada dataset:
 
-* `Area`: Negara (Indonesia, Malaysia, Vietnam, dsb.)
+* `Area`: Negara (Indonesia, Malaysia, Vietnam, Thailand dan Filipina.)
 * `Item`: Komoditas (Rice, Maize, Coffee, green, Cocoa Beans, Palm Oil)
 * `Year`: Tahun produksi
 * `Value`: Jumlah produksi (dalam metrik ton)
