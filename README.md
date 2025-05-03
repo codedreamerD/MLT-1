@@ -6,12 +6,6 @@ Produksi pangan merupakan sektor vital bagi negara-negara ASEAN, mengingat sebag
 
 Proyek ini bertujuan membangun model machine learning berbasis LSTM untuk memprediksi produksi komoditas-komoditas penting tersebut di beberapa negara ASEAN hingga tahun 2030.
 
-**Mengapa masalah ini penting?**
-
-* Pemerintah dan pelaku industri membutuhkan prediksi yang akurat untuk menjaga ketahanan pangan.
-* Fluktuasi produksi berdampak langsung terhadap harga dan distribusi komoditas.
-* Model prediksi dapat membantu perencanaan logistik dan kebijakan subsidi.
-
 ## Business Understanding
 
 ### Problem Statements
