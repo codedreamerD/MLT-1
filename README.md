@@ -10,21 +10,19 @@ Proyek ini bertujuan membangun model machine learning berbasis LSTM untuk mempre
 
 ### Problem Statements
 
-1. Tren produksi komoditas pertanian di ASEAN sangat fluktuatif dan tidak menentu dari tahun ke tahun.
-2. Belum ada standar prediksi terstruktur untuk membandingkan posisi produksi Indonesia terhadap negara ASEAN lainnya.
-3. Metode statistik konvensional (regresi linear, moving average) kurang mampu menangkap pola musiman dan nonlinier yang kompleks.
+* Bagaimana memanfaatkan data historis untuk memprediksi produksi pangan pada negara-negara ASEAN?
+* Apakah model LSTM mampu memberikan hasil prediksi yang akurat untuk data produksi time-series?
 
 ### Goals
 
-1. Mengembangkan model prediksi produksi menggunakan LSTM univariat berdasarkan histori data produksi (1961–2023).
-2. Membandingkan hasil prediksi tahun 2022–2030 antar negara ASEAN untuk tiap komoditas.
-3. Menunjukkan keunggulan LSTM dibanding metode tradisional dalam menangkap pola waktu musiman.
+* Membangun model prediksi produksi berdasarkan tren tahunan dan jenis komoditas di negara ASEAN.
+* Mengevaluasi model menggunakan metrik MSE dan RMSE, lalu memprediksi hasil produksi hingga tahun 2030.
 
 ### Solution Statements
 
-* Melatih 25 model LSTM univariat (5 negara × 5 komoditas).
-* Evaluasi performa model dilakukan menggunakan **MSE** dan **RMSE**.
-* Menyediakan visualisasi tren dan hasil prediksi dalam grafik garis dan batang.
+* Menggunakan **Long Short-Term Memory (LSTM)** karena kemampuannya dalam mempelajari pola jangka panjang pada data time series.
+* Menyusun preprocessing data berupa encoding, scaling, dan reshaping sebelum digunakan oleh model LSTM.
+* Melakukan **early stopping** untuk menghindari overfitting, serta membandingkan hasil prediksi aktual dan prediksi model menggunakan **RMSE** sebagai indikator akurasi.
 
 ## Data Understanding
 
