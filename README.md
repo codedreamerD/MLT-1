@@ -134,9 +134,11 @@ Proyek ini memprediksi produksi jagung, beras, kopi, kakao dan kelapa sawit dari
 ![Forecasted Coffee Green Production](repo-dir/Forecast-CoffeeGreen-Until-2030.png)
 
 ### Cocoa beans Production
+
 ![Forecasted Cocoa Beans Production](repo-dir/Forecast-Cocoa-Until-2030)
 
 ### Palm Oil Production
+
 ![Forecasted Palm Oil Production](repo-dir/Forecast-PalmOil-Until-2030)
 
 Prediksi ini memberikan wawasan penting bagi pengambil kebijakan dan pelaku industri untuk merencanakan strategi pertanian dan mengantisipasi tren produksi lintas negara ASEAN.
